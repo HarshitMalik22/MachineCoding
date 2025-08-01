@@ -36,7 +36,15 @@ const useTicTacToe = () => {
             if(winner || board[index]) return 
 
             const newBoard = [...board]
-            newBoard[index] = isXNext? "X" : "O";
+            newBoard[index] = isXNext?   <img 
+    src="https://i.pinimg.com/736x/04/7e/f4/047ef4595d9e2968739e904b47d81e6c.jpg" 
+    alt="X" 
+    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+  /> :<img 
+    src="https://www.shutterstock.com/image-vector/illustration-cute-baby-golden-retrieve-600nw-2488093199.jpg" 
+    alt="X" 
+    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+  />;
             setBoard(newBoard);
             setIsXNext(!isXNext);
         };
