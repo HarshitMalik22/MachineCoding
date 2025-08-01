@@ -51,9 +51,27 @@ const useTicTacToe = () => {
 
       const getStatusMessage = () => {
         const winner = calculateWinner(board);
-        if (winner) return 'Player ${winner} wins!';
-          if (!board.includes(null)) return 'It is a draw!';
-          return 'Player $(isXNext ? "X" : "O"} turn';
+        if (winner) return `Player ${winner} wins!`;
+        if (!board.includes(null)) return 'It is a draw!';
+        return (
+          <span>
+            Player{' '}
+            {isXNext ? (
+              <img
+                src="https://i.pinimg.com/736x/04/7e/f4/047ef4595d9e2968739e904b47d81e6c.jpg"
+                alt="X"
+                style={{ width: 24, height: 24, objectFit: 'cover', verticalAlign: 'middle' }}
+              />
+            ) : (
+              <img
+                src="https://www.shutterstock.com/image-vector/illustration-cute-baby-golden-retrieve-600nw-2488093199.jpg"
+                alt="O"
+                style={{ width: 24, height: 24, objectFit: 'cover', verticalAlign: 'middle' }}
+              />
+            )}{' '}
+            turn
+          </span>
+        );
       };
 
       const resetGame = () => {
